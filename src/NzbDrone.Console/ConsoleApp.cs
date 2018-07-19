@@ -41,7 +41,7 @@ namespace NzbDrone.Console
             {
                 System.Console.WriteLine("");
                 System.Console.WriteLine("");
-                Logger.Fatal(ex, "EPIC FAIL!");
+                Logger.Fatal(ex, "LidarrStartupException");
                 Exit(ExitCodes.NonRecoverableFailure);
             }
             catch (SocketException ex)
@@ -55,14 +55,14 @@ namespace NzbDrone.Console
             {
                 System.Console.WriteLine("");
                 System.Console.WriteLine("");
-                Logger.Fatal(ex, "EPIC FAIL!");
+                Logger.Fatal(ex, "RemoteAccessException");
                 Exit(ExitCodes.Normal);
             }
             catch (Exception ex)
             {
                 System.Console.WriteLine("");
                 System.Console.WriteLine("");
-                Logger.Fatal(ex, "EPIC FAIL!");
+                Logger.Fatal(ex, "Exception");
                 Exit(ExitCodes.UnknownFailure);
             }
 
